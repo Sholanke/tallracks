@@ -1,0 +1,25 @@
+.tabs {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: fit-content;
+  margin: 0 auto;
+
+  .tab {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 100vh;
+    gap: 5px;
+    background: #1a1a1a;
+    font-size: 12px;
+
+    &.active {
+      background-color: #fff;
+      &,
+      * {
+        color: #000;
+      }
+    }
+  }
+}

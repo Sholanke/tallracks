@@ -1,0 +1,154 @@
+.app-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  h4 {
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: -1px;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 16px;
+    background-color: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(15px);
+    border-radius: 100vh;
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 100vh;
+      pointer-events: none;
+      border: 1px solid transparent;
+      background: linear-gradient(
+          140deg,
+          rgba(255, 255, 255, 0.2),
+          rgba(255, 255, 255, 0.07)
+        )
+        border-box;
+      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+    }
+
+    input {
+      padding: 15px 10px;
+      font-size: 15px;
+      min-width: 259px;
+      font-weight: 500;
+
+      &::placeholder {
+        color: #fff;
+      }
+    }
+  }
+
+  &__button {
+    padding: 15px 30px;
+    background: #0000cc;
+    border-radius: 100vh;
+    font-size: 12px;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__profile {
+    height: 50px;
+    width: 50px;
+    border-radius: 100vh;
+    box-shadow: 0 0 0 5px #2020ff1a;
+    position: relative;
+
+    img {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+    }
+  }
+}
+
+.layout {
+  &__header-bg {
+    height: 428px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+  }
+
+  &__main {
+    padding: 35px 30px;
+    padding-bottom: 0;
+    display: flex;
+    align-items: flex-start;
+
+    &__content {
+      max-width: 980px;
+      margin: 0 auto;
+      width: 100%;
+      padding-right: 49px;
+    }
+  }
+
+  &__sidebar-container {
+    height: fit-content;
+    position: sticky;
+    top: 145px;
+    min-height: calc(100vh - 145px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 40px;
+  }
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 15px 12px;
+    position: relative;
+    width: fit-content;
+    border-radius: 15px;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.04),
+      rgba(255, 255, 255, 0.04)
+    );
+    margin-top: 30px;
+
+    &:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 15px;
+      pointer-events: none;
+      border: 1px solid transparent;
+      background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.05),
+          rgba(255, 255, 255, 0.03)
+        )
+        border-box;
+      mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+    }
+
+    a.active {
+      svg * {
+        color: #0000ff;
+      }
+    }
+  }
+}

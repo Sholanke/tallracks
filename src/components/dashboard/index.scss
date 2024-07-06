@@ -1,0 +1,158 @@
+.dashboard {
+  margin-top: 46px;
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 27px;
+  }
+
+  &__legends {
+    display: flex;
+    justify-content: center;
+    gap: 77px;
+    margin-bottom: 35px;
+  }
+
+  &__legend {
+    text-align: center;
+
+    > span {
+      line-height: 20px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+
+      span {
+        width: 8px;
+        height: 8px;
+        display: block;
+        border-radius: 100vh;
+        background: #00d775;
+      }
+    }
+
+    &:nth-child(2) {
+      span {
+        span {
+          background: #7c41ff;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      span {
+        span {
+          background: #ffcb03;
+        }
+      }
+    }
+
+    p {
+      margin: 4px 0;
+      font-size: 20px;
+    }
+  }
+}
+
+.dashboard-activities {
+  margin: 35px 0;
+  padding: 30px;
+  background-color: #090909;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    gap: 6px;
+    margin-bottom: 62px;
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    > div {
+      flex: 1;
+      background: #ffffff05;
+      border-radius: 10px;
+      height: 123px;
+      padding: 20px;
+
+      &:before {
+        border-radius: 10px;
+        background: linear-gradient(to bottom, #6666661a, #00000000, #6666661a)
+          border-box;
+      }
+
+      span {
+        font-size: 12px;
+      }
+
+      p {
+        margin-top: 9px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.dashboard-top {
+  margin: 35px 0;
+  padding: 26px 28px;
+  background: #090909;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 26px;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+  }
+
+  &__music-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__more {
+    border-radius: 100vh !important;
+    margin: 50px auto 0 auto;
+    display: block;
+    padding: 10px 25px;
+    background: #ffffff05;
+
+    &::before {
+      border-radius: 100vh !important;
+    }
+  }
+
+  &__numbers {
+    width: 100%;
+
+    thead {
+      td {
+        color: #ffffff99;
+      }
+    }
+    tr {
+      td {
+        padding: 20px 0;
+
+        &:nth-child(2) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

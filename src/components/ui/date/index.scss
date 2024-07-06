@@ -1,0 +1,20 @@
+.date-range {
+  display: flex;
+  align-items: center;
+  padding: 14px 25px;
+  width: 100%;
+  border: 1px solid #d7dce11a;
+  border-radius: 100vh;
+  background-color: #ffffff0a;
+  backdrop-filter: blur(15px);
+  gap: 10px;
+
+  svg {
+    margin-left: 10px;
+  }
+
+  p {
+    margin-left: auto;
+    color: #ffffff99;
+  }
+}
