@@ -52,7 +52,7 @@ export default function Subscribers() {
                 label: "Approved",
                 data: [25, 55, 15, 5, 30, 60, 70, 25, 55, 35, 5, 27],
                 backgroundColor: [...Array(12)].map(() => getGradient()),
-                borderRadius: 6,
+                borderRadius: 7,
                 borderSkipped: false,
                 barThickness: 42.43,
                 borderColor: "rgba(0,0,0,0)",

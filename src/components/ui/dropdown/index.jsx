@@ -1,8 +1,10 @@
+import Icon from "../icon";
 import "./index.scss";
 
-export default function Dropdown({ value }) {
+export default function Dropdown({ value, iconName }) {
   return (
     <button className="dropdown">
+      <Icon name={iconName} />
       {value}
       {/* prettier-ignore */}
       <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">

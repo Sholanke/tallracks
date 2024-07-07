@@ -7,15 +7,9 @@ export default function Layout({ children }) {
   const [scrollY, setScrollY] = useState();
 
   useEffect(() => {
-    function scrollListener() {
-      setScrollY(window.scrollY / 500);
-    }
-
+    function scrollListener() { setScrollY(window.scrollY / 500); }
     window.addEventListener("scroll", scrollListener);
-
-    return () => {
-      window.removeEventListener("scroll", scrollListener);
-    };
+    return () => { window.removeEventListener("scroll", scrollListener);};
   }, []);
 
   return (
@@ -23,7 +17,7 @@ export default function Layout({ children }) {
       <img
         style={{
           opacity: 1 - scrollY,
-          transform: `translateY(-${scrollY * 100}px)`,
+          transform: `translateY(-${scrollY * 40}px)`,
         }}
         className="layout__header-bg"
         src="/images/header-bg.png"
