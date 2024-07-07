@@ -8,7 +8,7 @@ export default function Layout({ children }) {
 
   useEffect(() => {
     function scrollListener() {
-      setScrollY(window.scrollY / 1000);
+      setScrollY(window.scrollY / 500);
     }
 
     window.addEventListener("scroll", scrollListener);
